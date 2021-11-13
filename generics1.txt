@@ -1,0 +1,45 @@
+package generics_1;
+
+public class Emp {
+
+	int id;
+	String name;
+	double sal;
+	String dept;
+	public Emp(int id, String name, double sal, String dept) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.sal = sal;
+		this.dept = dept;
+	}
+	@Override
+	public String toString() {
+		return "Emp [id=" + id + ", name=" + name + ", sal=" + sal + ", dept=" + dept + "]";
+	}
+		
+
+}
+package generics_1;
+
+import java.util.HashSet;
+
+public class Company {
+
+	public static void main(String[] args) {
+		HashSet <Emp> h = new HashSet <>();
+		h.add(new Emp(123,"Mansi",22000,"Development"));
+		h.add(new Employee (231,"ABC",30000,"IT"));
+		h.add(new Employee (145,"XYZ",40000,"Testing"));
+		Company.printHashSet(h);
+	}
+
+	private static void printHashSet(HashSet<Emp> h) {
+		for(Emp temp:h) {
+			System.out.println(temp);
+			
+		}
+		
+	}
+
+}
